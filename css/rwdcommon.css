@@ -1,0 +1,194 @@
+/* max-width : 1024 px( 이하  )*/
+@media screen and (max-width:1024px) {
+
+    #header h1 {
+        font-family: 'Potta One', cursive;
+        font-size: 27px;
+        color: #ffd23c;
+        margin: 30px 0;
+        float: none;
+        text-align: center;
+    }
+
+    #nav {
+        float: none;
+        font-size: 16px;
+        /* border:1px solid #000; */
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    #nav .depth1>li {
+        display: inline-block;
+        font-weight: bold;
+        padding: 0px 12px 30px 12px;
+        position: relative;
+        text-align: left;
+    }
+
+    #nav .depth2 {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 170px;
+        background: #fff;
+        box-shadow: 0px -2px 10px #ddd;
+        padding: 10px 0px;
+        color: #ffae3d;
+        border-radius: 5px;
+        z-index: 999;
+        display: none;
+    }
+
+
+
+    /* 마지막 괄호 */
+}
+
+
+/* max-width : 768px( 이하  )*/
+@media screen and (max-width:768px) {
+
+
+    #header h1 {
+        font-family: 'Potta One', cursive;
+        font-size: 27px;
+        color: #ffd23c;
+        margin: 30px 0;
+        float: none;
+        text-align: left;
+    }
+
+    #nav {
+        float: none;
+        font-size: 16px;
+        /* border:1px solid #000; */
+        margin-top: 30px;
+        text-align: center;
+        display: none;
+        width: 200px;
+        background: #fff;
+        position: absolute; top: 100%; right: 0;
+        z-index: 999;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+
+    }
+    #nav.on{display: block;}
+    
+    #nav .depth1>li {
+        display: block;
+        font-weight: bold;
+        padding: 15px 12px 15px 12px;
+        position: relative;
+        text-align: center;
+    }
+
+    #nav .depth2 {
+        /* static일떄는 방향값이 적용안됨 */
+        position: static;
+        top: 100%;
+        left: 50%;
+        transform: translate(0%);
+        width: auto;
+        background: #fff;
+        box-shadow: unset;
+        padding: 10px 0px 0px ;
+        color: #ffae3d;
+        border-radius: 0px;
+        z-index: 999;
+        display: none;
+    }
+    #nav .depth2::before { 
+       
+        display: none;
+    
+    }
+
+    #header .row {
+        position: relative;
+    }
+
+    #header .open, #header .close {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 20px;
+       
+    }
+    #header .open.on {display: block;}
+    #header .close.on {display: block;}
+
+
+    #header .open button, #header .close button {
+        font-size: 20px;
+        color: #000;
+        background: none;
+        border: none;
+    }
+    #header .close {display: none;}
+
+    #footer .company p {margin-top: 0px;}
+    #footer .company span {
+        padding:5px 7px;
+        /* border-right:1px solid rgba(255,255,255,0.5); */
+        font-weight:normal;
+        letter-spacing: -0.7px;
+        position:relative;
+        display: block;
+        
+    }
+    /* #footer .company span:last-child {
+        border-right:none 
+    } */
+    #footer .company span::after {
+        content:'';
+        width:1px; background:rgba(255,255,255,0.5);
+        position:absolute; top:4px; bottom:2px; right:-2px; 
+        display: none;
+     }
+    #footer .company span:last-child::after { 
+        display:none
+    }
+    #footer .menu {
+        background:#eee;
+        color:#333;
+        padding:0px;
+    }
+    #footer .menu .row { padding: 0;}
+    #footer .menu a {
+        padding:15px 10px; display:inline-block;
+        /* border-right:1px solid #333; */
+        position:relative;
+        width: 50%;
+        border: 1px solid #000;
+        
+    }
+    #footer .menu a::after {
+        content:''; width:1px; 
+        background:#000; 
+        position:absolute; right:-0.5px; 
+        top:2.5px; bottom:2.5px; 
+        display: none;
+        
+     }
+     #footer .menu a:nth-child(add) /*(2n+1)도 사용가능 (홀수) */ {
+         border-left:1px solid #000 ;
+
+     }
+     
+#footer .menu a:last-child {
+    width: 50%;
+        border: 1px solid #000;
+}
+#footer .copyright span {
+    display: block;
+}
+
+
+
+
+    /* 마지막 괄호 */
+}
