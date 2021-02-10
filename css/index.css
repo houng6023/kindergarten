@@ -41,8 +41,8 @@
     .slide-group .slidetext {
     position:absolute;
     top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
+    left:0%; right: 0%;
+    transform:translate(0%, -50%);
     text-align:center; 
     color:#fff;
 }
@@ -66,13 +66,16 @@
     font-size: 1.375em;
     text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
     text-decoration:underline;
+    padding: 0 20px;
+    line-height: 1.3;
 }
 .slide-group .slide.slick-active .slidetext p:nth-child(2) {
 animation: fadeInRight 0.5s both 1.1s ;}
 .slide-group .slide.slick-active .slidetext p:nth-child(3) {
     animation: fadeInUp 0.5s both 1.6s ;}
 .article {position: relative;} 
-.article .playstop {position: absolute; bottom: 10px; left: 50%; margin-left: 40px; color: #fff; background: none;
+.article .playstop {position: absolute; bottom: 10px; left: 50%;
+    margin-left: 40px; color: #fff; background: none;
 border: none; font-size: 10px;}
 /*
 안쪽여백 : 상하 14px 우좌 28px
@@ -101,11 +104,14 @@ FAQ : 배경색 rgba(255, 255, 255, 0.5), 글자색 #000, 호버글자색 #fff
 }
 
 .article:nth-child(2),
-.article:nth-child(3),
 .article:nth-child(4) { 
     padding-top:84px;
     padding-bottom:84px;
 }
+.article:nth-child(3) {
+    padding-bottom:84px;
+}
+
 .main h2 {
     font-size:28px; padding:30px 0 30px; color:#222;
     font-weight:bold; text-align:center;
@@ -115,6 +121,7 @@ FAQ : 배경색 rgba(255, 255, 255, 0.5), 글자색 #000, 호버글자색 #fff
     font-size:14px; color:#333; padding-bottom:30px;
     text-align:center;
     position:relative;
+    line-height: 1.3;
 }
 .main .titleinfo::after { 
     content:'';
@@ -127,6 +134,7 @@ FAQ : 배경색 rgba(255, 255, 255, 0.5), 글자색 #000, 호버글자색 #fff
 }
 
 /* 유치원활동(.article 2번째) */
+.main .article:nth-child(2) {overflow: hidden;}
 .main .article:nth-child(2) ul { overflow:hidden; margin-top:50px }
 .main .article:nth-child(2) ul li {
     float:left; width:24%; 
@@ -136,16 +144,20 @@ FAQ : 배경색 rgba(255, 255, 255, 0.5), 글자색 #000, 호버글자색 #fff
 }
 .main .article:nth-child(2) ul li:nth-child(1) {
     background:url(../img/main-business1.min.jpg) no-repeat;
+    /* background-position: -10px -10px; */
 }
 .main .article:nth-child(2) ul li:nth-child(2) {
     background:url(../img/main-business2.min.jpg) no-repeat;
+    /* background-position: -10px -10px; */
 }
 .main .article:nth-child(2) ul li:nth-child(3) {
     background:url(../img/main-business3.min.jpg) no-repeat;
+    /* background-position: -10px -10px; */
 }
 .main .article:nth-child(2) ul li:nth-child(4) {
     margin-right:0%; 
     background:url(../img/main-business4.min.jpg) no-repeat;
+    /* background-position: -10px -10px; */
 }
 .main .article:nth-child(2) ul li h3 { font-size:20px;
      font-weight:bold; margin-bottom:15px }
@@ -174,20 +186,19 @@ FAQ : 배경색 rgba(255, 255, 255, 0.5), 글자색 #000, 호버글자색 #fff
 .main .article:nth-child(2) ul li:nth-child(4) > div { 
     background: rgba(247, 111, 111, 0.5);
 }
-
-/* 교육과정안내(.article 3번째) */
-.main .article:nth-child(3) .column {
-    float:left; width:31.33%;
-    margin-right:3%; margin-top:56px;
-    /* height:508px; border:1px solid #000; */
-}
+ /* 교육과정안내(.article 3번째) */
+ .main .article:nth-child(3) .column {
+     float:left; width:31.33%;
+     margin-right:3%; margin-top:56px;
+     
+ }
 .main .article:nth-child(3) .column:nth-child(2) > div {
     height:508px; 
     background:url(../img/main-product3.min.jpg) no-repeat;
     background-size:cover; }
 .main .article:nth-child(3) .column:nth-child(3) { margin-right:0; }
 .main .article:nth-child(3) .column:nth-child(1) > div,
-.main .article:nth-child(3) .column:nth-child(3) > div { height:239px }
+.main .article:nth-child(3) .column:nth-child(3) > div { height:239px; overflow: hidden;}
 .main .article:nth-child(3) .column:nth-child(1) > div:nth-child(1) {
     background:url(../img/main-product1.min.jpg) no-repeat;
     background-size:cover; margin-bottom:30px }
@@ -298,7 +309,9 @@ FAQ : 배경색 rgba(255, 255, 255, 0.5), 글자색 #000, 호버글자색 #fff
 .main .article:nth-child(5) .row { 
     position:absolute; top:50%; left:50%;
     transform:translate(-50%, -50%);
+    text-align: center;
     color:#fff; font-size:20px;
+    line-height: 1.2;
 }
 
 .gototop { position: fixed; bottom: 20px;

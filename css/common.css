@@ -7,6 +7,9 @@
     margin:0 auto
 }
 body { font-family: 'Nanum Gothic', sans-serif; }
+#header.on .outer {margin-top: -32px;}
+#header.on {position: fixed; width: 100%; top: 0; left: 0;
+background: #fff; z-index: 999999999;}
 
 #header .outer {
     background:#f76f6f;
@@ -14,6 +17,7 @@ body { font-family: 'Nanum Gothic', sans-serif; }
     font-size:12px; 
     padding:10px 0px;
     letter-spacing:-0.5px; /* 자간 : 글자사이 간격 */
+    transition: all 0.3s;
 }
 #header .sns { float:left }
 #header .sns a { padding-right:20px }
@@ -38,6 +42,8 @@ body { font-family: 'Nanum Gothic', sans-serif; }
     margin:30px 0;
     float:left
 }
+#header .open, #header .close { display: none; }
+
 #nav { float:right;
     font-size:16px;
     /* border:1px solid #000; */
@@ -52,7 +58,7 @@ body { font-family: 'Nanum Gothic', sans-serif; }
 #nav .depth1 > li:first-child {
     color:#ffd23c;
 }
-#nav .depth1 > li:hover {
+#nav .depth1 > li.on {
     color:#ffae3d;
 }
 #nav .depth1 > li > a > i {
@@ -62,7 +68,7 @@ body { font-family: 'Nanum Gothic', sans-serif; }
 #nav .depth2 {
     position:absolute;
     top:100%;
-    left:0;
+    left:0; 
     width:170px;
     background:#fff;
     box-shadow:0px -2px 10px #ddd;
@@ -78,10 +84,12 @@ body { font-family: 'Nanum Gothic', sans-serif; }
     border-top-color:transparent;
     border-left-color:transparent;
     border-right-color:transparent;
-    position:absolute; bottom:100%; left:40px;
+    position:absolute; bottom:100%; left:50%; 
+    transform: translate(-50%);
+
 }
 
-#nav .depth1 > li:hover > .depth2 {
+#nav .depth1 > li.on > .depth2 {
     display:block;
 }
 #nav .depth2 > li > a {
@@ -140,6 +148,7 @@ body { font-family: 'Nanum Gothic', sans-serif; }
 #footer .contact a:hover {
     color:rgba(255,255,255,1);
 }
+#footer .company p {margin-top: 5px;}
 #footer .company span {
     padding:0 7px;
     /* border-right:1px solid rgba(255,255,255,0.5); */
@@ -164,5 +173,8 @@ body { font-family: 'Nanum Gothic', sans-serif; }
     color:rgba(255,255,255,0.5);
     padding:10px 0
 }
+
+
+
 
 
