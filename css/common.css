@@ -22,7 +22,7 @@ background: #fff; z-index: 999999999;}
 #header .sns { float:left }
 #header .sns a { padding-right:20px }
 #header .membership { float:right }
-#header .membership a { margin-left:20px;
+#header .membership a { padding-left:20px;
     position:relative }
 #header .membership a::after {
     content:'';
